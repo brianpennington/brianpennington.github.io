@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Capstone Final Project</title>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS v3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS  v4 -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+    
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 align=center>Data Science Capstone Project</h1>
+        <h1 align=center>A Comparison of Dallas and Fort Worth Neighborhoods</h1>
+        <ul class="nav nav-pills nav-justified" role="navigation">
+                <li role="presentation" class ="border border-primary">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                <li role="presentation" class ="border border-primary">
+                    <a href="#data">Data</a>
+                </li>
+                <li role="presentation" class ="border border-primary">
+                    <a href="#methodology">Methodology</a>
+                </li>
+                <li role="presentation" class ="border border-primary">
+                    <a href="#results">Results</a>
+                </li>
+                <li role="presentation" class ="border border-primary">
+                    <a href="#discussion">Discussion</a>
+                </li>
+                <li role="presentation" class ="border border-primary">
+                    <a href="#conclusion">Conclusion</a>
+                </li>
+        </ul>
+    </header>
+
+    <!-- <section  id = "container"> -->
+        <a name="introduction"></a>
+        <h2 class="col-sm-12">Introduction</h2>
+        <div class="row">
+            <p>It is often said that Dallas is where the east ends and Fort Worth is where the west begins. Certainly, 
+                it is true that when you think of Fort Worth, 
+                you think of pickup trucks and cowboy boots and Billy Bob's at the Fort Worth Stockyards and when you think of Dallas, 
+                you think of BMW's and banking and Highland Park. The question for someone considering moving to the DFW area, 
+                though, is: is there a difference in the neighborhoods in Fort Worth and Dallas?
+                <br><br>
+                <b>This project will investigate whether there are any systematic differences in Dallas vs. Fort Worth nighborhoods.</b></p>
+        </div>
+        <a name="data"></a>
+        <h2 class="col-sm-12"><i class="fa fa-cubes"></i> Data</h2>
+        <div class="">
+            <!-- The zillow icon size is 250 x 52 -->
+            <p>The geodata used for this project is the <img src="image/Zillow_Wordmark_Blue_RGB.png" alt="Zillow" style="width:70px;height:15px"> US Neighborhoods dataset.
+                The dataset has over 17,300 neighboorhood boundaries in the largest cities in the U.S.  
+                The Zillow data team used various tactics to collect the data, including calling individual chambers of commerce, tourism and convention boards, speaking with real estate agents and community members in these areas, as well as using available online local sources.
+                <br><br>
+                The Zillow dataset contains full geoshape data for each neighborhood
+                as well as properties sections that contain the neighborhood name, regionid, a two-dimensional geopoint, city, county and state.
+                <br><br>
+                Zillow makes this data available for free under a creative commons licence. All that is required to use the files is to attribute Zillow as the source
+                of the data and make any updates or change you make to the files available to everyone else via the same or similar license.
+                The data can be downloaded at the <a href="https://data.opendatasoft.com/explore/dataset/zillow-neighborhoods%40public/export/" 
+                target="_blank">opendatasoft website <i class="fa fa-download"></i></a>.
+                <br><br>
+                The data is available in a variety of formats including csv, JSON, Excel, GeoJSON, Shapefile and KML.  We used GeoJSON files.   
+                GeoJSON is an open standard format designed for representing simple geographical features, along with their non-spatial attributes. 
+                It is based on the JSON (JavaScript Object Notation). 
+            </p>
+            
+        </div>
+        <a name="methodology"></a>
+        <a name="results"></a>
+        <a name="discussion"></a>
+        <a name="conclusion"></a>
+        
+    <!-- </section> -->
+
+
+    <footer>
+        <p class=" container center">Data Science Capstone Project<br/>Brian Pennington</p>
+    </footer>
+   
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
+<!-- DO NOT CHANGE ANY PART OF THIS HTML CODE!!! -->
+ 
