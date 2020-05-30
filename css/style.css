@@ -12,14 +12,25 @@ footer{
   padding: 1%;
   margin: 1%;
 }
-
+h2{
+  padding: 1%;
+  margin: 1%;
+}
+h3{
+  padding: 1%;
+  margin: 1%;
+}
+h4{
+  padding: 1%;
+  margin: 1%;
+}
 section{
   margin:1%;
     padding:1%;
 }
 p{
-  margin:1%;
-    padding:1%;
+  margin:0.5%;
+  padding:0.5%;
 }
 
 

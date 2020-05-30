@@ -46,7 +46,7 @@
     <!-- <section  id = "container"> -->
         <a name="introduction"></a>
         <h2 class="col-sm-12">Introduction</h2>
-        <div class="row">
+        <div class="">
             <p>It is often said that Dallas is where the east ends and Fort Worth is where the west begins. Certainly, 
                 it is true that when you think of Fort Worth, 
                 you think of pickup trucks and cowboy boots and Billy Bob's at the Fort Worth Stockyards and when you think of Dallas, 
@@ -59,21 +59,32 @@
         <h2 class="col-sm-12"><i class="fa fa-cubes"></i> Data</h2>
         <div class="">
             <!-- The zillow icon size is 250 x 52 -->
-            <p>The geodata used for this project is the <img src="image/Zillow_Wordmark_Blue_RGB.png" alt="Zillow" style="width:70px;height:15px"> US Neighborhoods dataset.
+            <h4><img src="image/Zillow_Wordmark_Blue_RGB.png" alt="Zillow" style="float:left;width:70px;height:15px"> <b> Neighborhoods:  </b></h3>
+            <p> 
+                The geodata used for this project is from the Zillow US Neighborhoods dataset.
                 The dataset has over 17,300 neighboorhood boundaries in the largest cities in the U.S.  
                 The Zillow data team used various tactics to collect the data, including calling individual chambers of commerce, tourism and convention boards, speaking with real estate agents and community members in these areas, as well as using available online local sources.
                 <br><br>
                 The Zillow dataset contains full geoshape data for each neighborhood
                 as well as properties sections that contain the neighborhood name, regionid, a two-dimensional geopoint, city, county and state.
                 <br><br>
-                Zillow makes this data available for free under a creative commons licence. All that is required to use the files is to attribute Zillow as the source
+                Zillow makes this data available for free under a Creative Commons licence. All that is required to use the files is to attribute Zillow as the source
                 of the data and make any updates or change you make to the files available to everyone else via the same or similar license.
                 The data can be downloaded at the <a href="https://data.opendatasoft.com/explore/dataset/zillow-neighborhoods%40public/export/" 
                 target="_blank">opendatasoft website <i class="fa fa-download"></i></a>.
                 <br><br>
-                The data is available in a variety of formats including csv, JSON, Excel, GeoJSON, Shapefile and KML.  We used GeoJSON files.   
-                GeoJSON is an open standard format designed for representing simple geographical features, along with their non-spatial attributes. 
-                It is based on the JSON (JavaScript Object Notation). 
+                The data is available in a variety of formats including csv (comma-separated values), JSON (JavaScript Object Notation), Excel,
+                 GeoJSON, Shapefile and KML (Keyhole Markup Language).  We used GeoJSON files.   
+                GeoJSON is an open standard format based on the JSON that was designed for representing simple geographical features, along with their non-spatial attributes. 
+                <br><br></p>
+
+            <h4><i class="fa fa-foursquare"></i> <b>Place Data</b> by <b>Foursquare:</b>  </h3>
+            <p>Information about the neighborhoods was collected using the Foursquare Places database.  
+                The Places database has an extensive amount of venue data and user content that can be accessed using geolocation data. 
+                The database contains "firmographic" data and "rich community-sourced content" for more than 60 million commercial places around the world.
+                For each venue, there are over 90 attributes that can be accessed, including the venue name, address, gelocation, category as well as ratings, tips and photos. 
+                <br><br>
+                We focused on the information about the types of venues that are located in the neighborhoods to determine whether neighborhoods are similar or not.
             </p>
             
         </div>
