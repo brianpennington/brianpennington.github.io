@@ -97,24 +97,116 @@
                             of the center of the neighborhood.</li>
                         <li>That left 66 neighborhoods classified as solely residential</li>
                     </ul>
+                <li>K-means Clustering</li>
+                    <ul>
+                        <li>We used K-means clustering using venue concentrations to identify similar neighborhoods.
+                            K-means clustering is a "go to" method because of its simplicity and speed.
+                        </li>
+                        <li>Pros:</li>
+                            <ol>
+                                <li>It is fast and efficient.</li>
+                                <li>It is a technique geared to work on unlabeled data.</li>
+                                <li>It is an iterative technique.</li>
+                            </ol>
+                        <li>Cons:</li>
+                            <li>You must understand the context of your data well.</li>
+                            <li>You have to choose your own value of k, the number of clusters.</li>
+                            <li>It doesn't deal well with outliers.</li>
+                    </ul>
                 <li>Venue Categories as the target item</li>
-                    <p>When we initially ran a cluster analysis on the venue categories (map below), the residential neighborhoods (purple markers)
-                        were readily identifiable.  There were a handful of neighborhoods that had golf course (red markers), 
-                        a few that only had parks (green markers),
-                        and some that only had convenience and discount stores (orange markers).  
-                        But almost two-thirds of the neighborhoods were grouped into a large cluster (blue markers in the map below)
+                    <p>When we initially ran a cluster analysis on the venue categories (map below), the residential neighborhoods
+                        were readily identifiable.  There were a handful of neighborhoods that had golf courses, 
+                        a few that only had parks,
+                        and some that only had convenience or discount stores.  
+                        But almost two-thirds of the neighborhoods were grouped into a large cluster 
                         that could best be characterized as have "a little bit of everything".  Trying to spot a common theme for this large cluster
                         drew our attention to the "granularity" of the venue categories.  Do we really want to split out Mexican Cuisine into 
                         Mexican Restaurant, Tex-Mex Restaurant, Burrito Place and Taco Place?  Aren't bars, beer bars, cocktail bars, dive bars, gay bars,
-                        hotel bars, wine bars, lounges, and pubs all "drinking establishments"?
-                        <br><br>
-                        Without being exhaustive, we grouped the obvious venue categories into more inclusive "venue groups".  The full list can be
-                        found <a href="VenueGroups.html" target="_blank">here.</a>
+                        hotel bars, wine bars, lounges, and pubs all "drinking establishments"?  Is anything gained by distinguishing between Gyms,
+                        Boxing Gyms, Gymnastics Gyms and Gym/Fitness Centers?                     
                     </p>
                     <div>
-                        <iframe src="image/DFW_by_VenueCategory.html" title="DFW Neighborhoods by Venue Category" width="80%" height="500" style="border:1px solid black;"></iframe>
+                        <iframe src="DFW_by_VenueCategory.html" title="DFW Neighborhoods by Venue Category" width="80%" height="500" style="border:1px solid black;"></iframe>
                     </div>
+                    <div class="container">
+                        <h2>Clusters by Venue Category - 8</h2>
+                        <!-- <p>The .table-bordered class adds borders to a table:</p>             -->
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Cluster</th>
+                              <th>Color</th>
+                              <th>Number</th>
+                              <th>Description</th>
+                              <!-- <th>File</th> -->
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>0</td>
+                              <td>blue</td>
+                              <td>15</td>
+                              <td>Discount Stores</td>
+                              <!-- <td><a href="Cluster-0-8.html" target="_blank">Cluster 0 neighborhoods</a></td> -->
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>purple</td>
+                                <td>72</td>
+                                <td>Residential</td>
+                                <!-- <td><a href="Cluster-1-8.html" target="_blank">Cluster 1 neighborhoods</a></td> -->
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>orange</td>
+                                <td>262</td>
+                                <td>Everything Else</td>
+                                <!-- <td><a href="Cluster-2-8.html" target="_blank">Cluster 2 neighborhoods</a></td> -->
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>red</td>
+                                <td>9</td>
+                                <td>Golf courses</td>
+                                <!-- <td><a href="Cluster-3-8.html" target="_blank">Cluster 3 neighborhoods</a></td> -->
+                            </tr>
+                            <tr>
+                                <td>4</green>
+                                <td>green</td>
+                                <td>6</td>
+                                <td>Trails</td>
+                                <!-- <td><a href="Cluster-4-8.html" target="_blank">Cluster 4 neighborhoods</a></td> -->
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>yellow</td>
+                                <td>14</td>
+                                <td>Convenience Stores and little else</td>
+                                <!-- <td><a href="Cluster-5-8.html" target="_blank">Cluster 5 neighborhoods</a></td> -->
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>sky blue</td>
+                                <td>37</td>
+                                <td>Dining, Mostly Mexican</td>
+                                <!-- <td><a href="Cluster-6-8.html" target="_blank">Cluster 6 neighborhoods</a></td> -->
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>brown</td>
+                                <td>10</td>
+                                <td>Parks</td>
+                                <!-- <td><a href="Cluster-7-8.html" target="_blank">Cluster 7 neighborhoods</a></td> -->
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    
                         <li>Defined "Venue Groups"</li>
+                        <p>
+                            Without being exhaustive, we grouped the obvious venue categories into more inclusive "venue groups".  The full list can be
+                            found <a href="VenueGroups.html" target="_blank">here.</a>
+                        </p>
             </ol>
         </div>
         <div>
