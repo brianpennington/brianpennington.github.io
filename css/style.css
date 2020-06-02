@@ -32,7 +32,9 @@ p{
   margin:0.5%;
   padding:0.5%;
 }
-
+div{
+  border: 1px solid black;
+}
 
 
 h1{

@@ -3,50 +3,36 @@
 <head>
     <title>Capstone Final Project</title>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap CSS v3 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
     <!-- Bootstrap CSS  v4 -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class="">
         <h1 align=center>Data Science Capstone Project</h1>
         <h1 align=center>A Comparison of Dallas and Fort Worth Neighborhoods</h1>
-        <ul class="nav nav-pills nav-justified" role="navigation">
-                <li role="presentation" class ="border border-primary">
-                    <a href="#introduction">Introduction</a>
-                </li>
-                <li role="presentation" class ="border border-primary">
-                    <a href="#data">Data</a>
-                </li>
-                <li role="presentation" class ="border border-primary">
-                    <a href="#methodology">Methodology</a>
-                </li>
-                <li role="presentation" class ="border border-primary">
-                    <a href="#results">Results</a>
-                </li>
-                <li role="presentation" class ="border border-primary">
-                    <a href="#discussion">Discussion</a>
-                </li>
-                <li role="presentation" class ="border border-primary">
-                    <a href="#conclusion">Conclusion</a>
-                </li>
-        </ul>
+        
     </header>
-
-    <!-- <section  id = "container"> -->
+    <nav class="navbar navbar-expand-md justify-content-center sticky-top  mt-5" role="navigation">
+        <div class="navbar-nav d-flex justify-content-center bg-primary">
+            <a href="#introduction" role="presentation" class ="nav-item nav-link border border-white text-white rounded m-1 p-1">Introduction</a>
+            <a href="#data" role="presentation" class ="nav-item nav-link border border-white text-white rounded m-1 p-1">Data</a>
+            <a href="#methodology" role="presentation" class ="nav-item nav-link border border-white text-white rounded m-1 p-1">Methodology</a>
+            <a href="#results" role="presentation" class ="nav-item nav-link border border-white text-white rounded m-1 p-1">Results</a>
+            <a href="#discussion" role="presentation" class ="nav-item nav-link border border-white text-white rounded m-1 p-1">Discussion</a>
+            <a href="#conclusion" role="presentation" class ="nav-item nav-link border border-white text-white rounded m-1 p-1">Conclusion</a>
+        </div>                
+    </nav>
+    <div class="">            
         <a name="introduction"></a>
-        <h2 class="col-sm-12">Introduction</h2>
-        <div class="">
+        <h2 class="col-sm-12"><i class="fa fa-star-o"></i> <u>Introduction</u></h2>
             <p>It is often said that Dallas is where the east ends and Fort Worth is where the west begins. Certainly, 
                 it is true that when you think of Fort Worth, 
                 you think of pickup trucks and cowboy boots and Billy Bob's at the Fort Worth Stockyards and when you think of Dallas, 
@@ -54,10 +40,10 @@
                 though, is: is there a difference in the neighborhoods in Fort Worth and Dallas?
                 <br><br>
                 <b>This project will investigate whether there are any systematic differences in Dallas vs. Fort Worth nighborhoods.</b></p>
-        </div>
+    </div>
+    <div class="">
         <a name="data"></a>
-        <h2 class="col-sm-12"><i class="fa fa-cubes"></i> Data</h2>
-        <div class="">
+        <h2 class="col-sm-12"><i class="fa fa-cubes"></i> <u>Data</u></h2>
             <!-- The zillow icon size is 250 x 52 -->
             <h4><img src="image/Zillow_Wordmark_Blue_RGB.png" alt="Zillow" style="float:left;width:70px;height:15px"> <b> Neighborhoods:  </b></h3>
             <p> 
@@ -86,13 +72,233 @@
                 <br><br>
                 We focused on the information about the types of venues that are located in the neighborhoods to determine whether neighborhoods are similar or not.
             </p>
-            
+            <h4>Data Collection</h4>
+            <ol>
+                <li>GeoJSON files containing the neighborhood data for Dallas and Fort Worth were downloaded from the opensoftdata web site.</li>
+                    <ul>
+                        <li>The files were read using the geojson library and the neighborhood properties and boundary coordinates were appended to a dataframe.</li>
+                        <li>The geo_point_2d column was split into Latitude and Longitude columns and that column as well as the regionid were dropped.</li>
+                        <li>There are 425 neighborhoods, 225 in Fort Worth with the remainder in Dallas--
+                            and it's suburbs of Carollton, Desoto, Garland, Irving, Mesquite, Plano and Richardson.</li>
+                    </ul>
+                <li>Got venue information</li>
+                <li>Merged the data</li>
+            </ol>
+    </div>
+        <div>
+            <a name="methodology"></a>
+            <h2 class="col-sm-12"><i class="fa fa-search"></i> <u>Methodology</u></h2>
+            <ol>
+                <li>Neighborhood Venues</li>
+                    <ul>
+                        <li>The Zillow Neighborhoods are quite granular.</li>
+                        <li>238 of the neighborhoods solelywere residential had no venues within their neighborhood boundaries.</li>
+                        <li>It was decided that a better characterization of the nighborhoods should also include any venues within half a mile (800 meters) 
+                            of the center of the neighborhood.</li>
+                        <li>That left 66 neighborhoods classified as solely residential</li>
+                    </ul>
+                <li>Venue Categories as the target item</li>
+                    <p>When we initially ran a cluster analysis on the venue categories (map below), the residential neighborhoods (purple markers)
+                        were readily identifiable.  There were a handful of neighborhoods that had golf course (red markers), 
+                        a few that only had parks (green markers),
+                        and some that only had convenience and discount stores (orange markers).  
+                        But almost two-thirds of the neighborhoods were grouped into a large cluster (blue markers in the map below)
+                        that could best be characterized as have "a little bit of everything".  Trying to spot a common theme for this large cluster
+                        drew our attention to the "granularity" of the venue categories.  Do we really want to split out Mexican Cuisine into 
+                        Mexican Restaurant, Tex-Mex Restaurant, Burrito Place and Taco Place?  Aren't bars, beer bars, cocktail bars, dive bars, gay bars,
+                        hotel bars, wine bars, lounges, and pubs all "drinking establishments"?
+                        <br><br>
+                        Without being exhaustive, we grouped the obvious venue categories into more inclusive "venue groups".  The full list can be
+                        found <a href="VenueGroups.html" target="_blank">here.</a>
+                    </p>
+                    <div>
+                        <iframe src="image/DFW_by_VenueCategory.html" title="DFW Neighborhoods by Venue Category" width="80%" height="500" style="border:1px solid black;"></iframe>
+                    </div>
+                        <li>Defined "Venue Groups"</li>
+            </ol>
         </div>
-        <a name="methodology"></a>
-        <a name="results"></a>
-        <a name="discussion"></a>
-        <a name="conclusion"></a>
-        
+        <div>
+            <a name="results"></a>
+            <h2 class="col-sm-12"><i class="fa fa-tasks"></i> <u>Results</u></h2>
+            <div class="container">
+                <iframe src="DFW_by_VenueGroup-8.html" title="DFW Neighborhoods by Venue Group" width="80%" height="500" style="border:1px solid black;"></iframe>
+                <a href="DFW_by_VenueGroup-8.html" target="_blank" class="btn btn-info float-right d-inline" role="button" style="vertical-align: middle">Open in new window</a>
+            </div>
+            <div class="container">
+                <h2>Clusters - 8</h2>
+                <!-- <p>The .table-bordered class adds borders to a table:</p>             -->
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Cluster</th>
+                      <th>Color</th>
+                      <th>Number</th>
+                      <th>Description</th>
+                      <th>File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0</td>
+                      <td>blue</td>
+                      <td>170</td>
+                      <td>Diversified</td>
+                      <td><a href="Cluster-0-8.html" target="_blank">Cluster 0 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>purple</td>
+                        <td>73</td>
+                        <td>Residential</td>
+                        <td><a href="Cluster-1-8.html" target="_blank">Cluster 1 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>orange</td>
+                        <td>8</td>
+                        <td>Parks</td>
+                        <td><a href="Cluster-2-8.html" target="_blank">Cluster 2 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>red</td>
+                        <td>10</td>
+                        <td>Golf courses</td>
+                        <td><a href="Cluster-3-8.html" target="_blank">Cluster 3 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</green>
+                        <td>green</td>
+                        <td>7</td>
+                        <td>Outdoor destinations</td>
+                        <td><a href="Cluster-4-8.html" target="_blank">Cluster 4 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>yellow</td>
+                        <td>19</td>
+                        <td>Shopping</td>
+                        <td><a href="Cluster-5-8.html" target="_blank">Cluster 5 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>sky blue</td>
+                        <td>126</td>
+                        <td>Fast food havens</td>
+                        <td><a href="Cluster-6-8.html" target="_blank">Cluster 6 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>brown</td>
+                        <td>12</td>
+                        <td>Convenience store and little else</td>
+                        <td><a href="Cluster-7-8.html" target="_blank">Cluster 7 neighborhoods</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="container">
+                <iframe src="DFW_by_VenueGroup-10.html" title="DFW Neighborhoods by Venue Group" width="80%" height="500" style="border:1px solid black;"></iframe>
+                <a href="DFW_by_VenueGroup-10.html" target="_blank" class="btn btn-info float-right" role="button">Open in new window</a>
+            </div>
+            <div class="container d-md-6">
+                <h2>Clusters - 10</h2>
+                <!-- <p>The .table-bordered class adds borders to a table:</p>             -->
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Cluster</th>
+                      <th>Color</th>
+                      <th>Number</th>
+                      <th>Description</th>
+                      <th>File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0</td>
+                      <td>blue</td>
+                      <td>13</td>
+                      <td>Asian Cuisine</td>
+                      <td><a href="Cluster-0-10.html" target="_blank">Cluster 0 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>purple</td>
+                        <td>73</td>
+                        <td>Residential</td>
+                        <td><a href="Cluster-1-10.html" target="_blank">Cluster 1 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>orange</td>
+                        <td>106</td>
+                        <td>Diversified</td>
+                        <td><a href="Cluster-2-10.html" target="_blank">Cluster 2 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>red</td>
+                        <td>9</td>
+                        <td>Golf courses</td>
+                        <td><a href="Cluster-3-10.html" target="_blank">Cluster 3 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</green>
+                        <td>green</td>
+                        <td>147</td>
+                        <td>Fast Food plus</td>
+                        <td><a href="Cluster-4-10.html" target="_blank">Cluster 4 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>yellow</td>
+                        <td>15</td>
+                        <td>Convenience store and little else</td>
+                        <td><a href="Cluster-5-10.html" target="_blank">Cluster 5 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>sky blue</td>
+                        <td>8</td>
+                        <td>Outdoor Destinations</td>
+                        <td><a href="Cluster-6-10.html" target="_blank">Cluster 6 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>brown</td>
+                        <td>26</td>
+                        <td>Fast Food and little else</td>
+                        <td><a href="Cluster-7-10.html" target="_blank">Cluster 7 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>pink</td>
+                        <td>18</td>
+                        <td>Shopping</td>
+                        <td><a href="Cluster-8-10.html" target="_blank">Cluster 8 neighborhoods</a></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>gold</td>
+                        <td>10</td>
+                        <td>Parks</td>
+                        <td><a href="Cluster-9-10.html" target="_blank">Cluster 9 neighborhoods</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              
+        </div>
+        <div>
+            <a name="discussion"></a>
+            <h2 class="col-sm-12"><i class="fa fa-commenting-o"></i> <u>Discussion</u></h2>
+            <p>Blah Blah</p>
+        </div>
+        <div>    
+            <a name="conclusion"></a>
+            <h2 class="col-sm-12"><i class="fa fa-trophy"></i> <u>Conclusion</u></h2>
+            <p>Blah Blah</p>
+        </div>
     <!-- </section> -->
 
 
