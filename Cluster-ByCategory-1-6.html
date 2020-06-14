@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Capstone Final Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS  v4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2 class="text-center"> Cluster By Category: 1 of 6 </h2>
+<table border="1" class="dataframe table table-bordered mx_auto">
+  <thead>
+    <tr style="text-align: center;">
+      <th>city</th>
+      <th>Neighborhood</th>
+      <th>Cluster</th>
+      <th>1st Most Common Venue</th>
+      <th>2nd Most Common Venue</th>
+      <th>3rd Most Common Venue</th>
+      <th>4th Most Common Venue</th>
+      <th>5th Most Common Venue</th>
+      <th>6th Most Common Venue</th>
+      <th>7th Most Common Venue</th>
+      <th>8th Most Common Venue</th>
+      <th>9th Most Common Venue</th>
+      <th>10th Most Common Venue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dallas</td>
+      <td>Coppell</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>Seafood Restaurant</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Desoto</td>
+      <td>Williamsburg Village</td>
+      <td>1</td>
+      <td>Supermarket</td>
+      <td>Burger Joint</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Brentwood-Oak Hills</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>BBQ Joint</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Diamond Hill - Jarvis</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>Convenience Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>West Meadowbrook</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>Mexican Restaurant</td>
+      <td>Gym / Fitness Center</td>
+      <td>Pharmacy</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Buckingham North</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Country Brook</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>Grocery Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Fall Creek Estates</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>Grocery Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Rustic Oaks</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Valley Creek North</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>Furniture / Home Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Windsor Park</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>Sandwich Place</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Plano</td>
+      <td>Dallas North Estates</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>Fabric Shop</td>
+      <td>Fried Chicken Joint</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Richardson</td>
+      <td>Owens Park</td>
+      <td>1</td>
+      <td>Burger Joint</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

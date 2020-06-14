@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Capstone Final Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS  v4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2 class="text-center"> Clusters By Group, k=15 </h2>
+<table border="1" class="dataframe table table-bordered mx_auto">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Cluster</th>
+      <th>Color</th>
+      <th>Neighborhoods</th>
+      <th>1st Most Common Venue</th>
+      <th>2nd Most Common Venue</th>
+      <th>3rd Most Common Venue</th>
+      <th>4th Most Common Venue</th>
+      <th>5th Most Common Venue</th>
+      <th>Neighborhood List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>blue</td>
+      <td>187</td>
+      <td>Residential-100%</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-0-15.html"target="_blank">Cluster 0 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>purple</td>
+      <td>11</td>
+      <td>Grocery Store-52%</td>
+      <td>Fast-Food Venue-26%</td>
+      <td>Liquor Store-8%</td>
+      <td>Park-5%</td>
+      <td>Italian Cuisine-5%</td>
+      <td><a href="Cluster-ByGroup-1-15.html"target="_blank">Cluster 1 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>orange</td>
+      <td>46</td>
+      <td>Fast-Food Venue-47%</td>
+      <td>Mexican Cuisine-12%</td>
+      <td>Grocery Store-3%</td>
+      <td>Asian Cuisine-3%</td>
+      <td>Shopping Venues-3%</td>
+      <td><a href="Cluster-ByGroup-2-15.html"target="_blank">Cluster 2 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>red</td>
+      <td>13</td>
+      <td>American Cuisine-73%</td>
+      <td>Fast-Food Venue-8%</td>
+      <td>Park-4%</td>
+      <td>Asian Cuisine-4%</td>
+      <td>Mediterranean Cuisine-4%</td>
+      <td><a href="Cluster-ByGroup-3-15.html"target="_blank">Cluster 3 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>green</td>
+      <td>10</td>
+      <td>Asian Cuisine-77%</td>
+      <td>Park-10%</td>
+      <td>Entertainment Venue-5%</td>
+      <td>Shopping Venue-3%</td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-4-15.html"target="_blank">Cluster 4 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>yellow</td>
+      <td>7</td>
+      <td>Golf Course-93%</td>
+      <td>Italian Cuisine-7%</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-5-15.html"target="_blank">Cluster 5 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sky blue</td>
+      <td>8</td>
+      <td>Park-100%</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-6-15.html"target="_blank">Cluster 6 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>brown</td>
+      <td>67</td>
+      <td>Fast-Food Venue-16%</td>
+      <td>Mexican Cuisine-10%</td>
+      <td>American Cuisine-8%</td>
+      <td>Asian Cuisine-7%</td>
+      <td>Outdoor Destination-4%</td>
+      <td><a href="Cluster-ByGroup-7-15.html"target="_blank">Cluster 7 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>pink</td>
+      <td>12</td>
+      <td>Drinking Establishment-41%</td>
+      <td>Athletic Venue-21%</td>
+      <td>Fast-Food Venue-10%</td>
+      <td>Southern / Soul Food Restaurant-7%</td>
+      <td>American Cuisine-5%</td>
+      <td><a href="Cluster-ByGroup-8-15.html"target="_blank">Cluster 8 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>gold</td>
+      <td>10</td>
+      <td>Health Services-88%</td>
+      <td>Shopping Venues-6%</td>
+      <td>Italian Cuisine-6%</td>
+      <td></td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-9-15.html"target="_blank">Cluster 9 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>fuchsia</td>
+      <td>10</td>
+      <td>Gym-62%</td>
+      <td>Fast-Food Venue-13%</td>
+      <td>Mexican Cuisine-5%</td>
+      <td>Shopping Venues-5%</td>
+      <td>Grocery Store-3%</td>
+      <td><a href="Cluster-ByGroup-10-15.html"target="_blank">Cluster 10 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>lime</td>
+      <td>6</td>
+      <td>Shopping Venues-100%</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-11-15.html"target="_blank">Cluster 11 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>olive</td>
+      <td>3</td>
+      <td>Convenience Store-100%</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-12-15.html"target="_blank">Cluster 12 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>teal</td>
+      <td>26</td>
+      <td>Fast-Food Venue-98%</td>
+      <td>Mexican Cuisine-2%</td>
+      <td>Convenience Store-1%</td>
+      <td></td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-13-15.html"target="_blank">Cluster 13 neighborhoods</a></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>maroon</td>
+      <td>9</td>
+      <td>Mexican Cuisine-88%</td>
+      <td>Convenience Store-6%</td>
+      <td>Golf Course-3%</td>
+      <td>Park-3%</td>
+      <td></td>
+      <td><a href="Cluster-ByGroup-14-15.html"target="_blank">Cluster 14 neighborhoods</a></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

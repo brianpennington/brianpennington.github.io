@@ -1,0 +1,1137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Capstone Final Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS  v4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2 class="text-center"> Cluster By Group: 1 of 9 </h2>
+<table border="1" class="dataframe table table-bordered mx_auto">
+  <thead>
+    <tr style="text-align: center;">
+      <th>city</th>
+      <th>Neighborhood</th>
+      <th>Cluster</th>
+      <th>1st Most Common Venue</th>
+      <th>2nd Most Common Venue</th>
+      <th>3rd Most Common Venue</th>
+      <th>4th Most Common Venue</th>
+      <th>5th Most Common Venue</th>
+      <th>6th Most Common Venue</th>
+      <th>7th Most Common Venue</th>
+      <th>8th Most Common Venue</th>
+      <th>9th Most Common Venue</th>
+      <th>10th Most Common Venue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carrollton</td>
+      <td>Carrollton Heights</td>
+      <td>1</td>
+      <td>Drinking Establishment</td>
+      <td>American Cuisine</td>
+      <td>Southern / Soul Food Restaurant</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Carrollton</td>
+      <td>Oak Tree North</td>
+      <td>1</td>
+      <td>Gym</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Carrollton</td>
+      <td>Parks of Carrollton</td>
+      <td>1</td>
+      <td>Grocery Store</td>
+      <td>Bookstore</td>
+      <td>Bubble Tea Shop</td>
+      <td>Fast-Food Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Arts District</td>
+      <td>1</td>
+      <td>American Cuisine</td>
+      <td>Fast-Food Venue</td>
+      <td>Arts/Entertainment</td>
+      <td>Museum</td>
+      <td>Mexican Cuisine</td>
+      <td>Grocery Store</td>
+      <td>Lodging</td>
+      <td>Park</td>
+      <td>Seafood Restaurant</td>
+      <td>Asian Cuisine</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Bluffview</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>American Cuisine</td>
+      <td>Grocery Store</td>
+      <td>Drinking Establishment</td>
+      <td>Fast-Food Venue</td>
+      <td>French Cuisine</td>
+      <td>Seafood Restaurant</td>
+      <td>Smoke Shop</td>
+      <td>Asian Cuisine</td>
+      <td>Personal Services</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>City Center District</td>
+      <td>1</td>
+      <td>Arts/Entertainment</td>
+      <td>Museum</td>
+      <td>Lodging</td>
+      <td>Park</td>
+      <td>American Cuisine</td>
+      <td>Entertainment Venue</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Convention Center District</td>
+      <td>1</td>
+      <td>Entertainment Venue</td>
+      <td>American Cuisine</td>
+      <td>Plaza</td>
+      <td>Lodging</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Eagle Ford</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>Fast-Food Venue</td>
+      <td>Italian Cuisine</td>
+      <td>Drinking Establishment</td>
+      <td>Lodging</td>
+      <td>Outdoor Destination</td>
+      <td>Event Space</td>
+      <td>American Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Government District</td>
+      <td>1</td>
+      <td>Lodging</td>
+      <td>American Cuisine</td>
+      <td>Plaza</td>
+      <td>Fast-Food Venue</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Lake Caroline</td>
+      <td>1</td>
+      <td>Italian Cuisine</td>
+      <td>Drinking Establishment</td>
+      <td>Liquor Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Love Field Area</td>
+      <td>1</td>
+      <td>Drinking Establishment</td>
+      <td>Airport-Related</td>
+      <td>Fast-Food Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Main Street District</td>
+      <td>1</td>
+      <td>Lodging</td>
+      <td>Fast-Food Venue</td>
+      <td>Farmers Market</td>
+      <td>American Cuisine</td>
+      <td>Plaza</td>
+      <td>Mexican Cuisine</td>
+      <td>Garden Center</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Near East</td>
+      <td>1</td>
+      <td>Drinking Establishment</td>
+      <td>Entertainment Venue</td>
+      <td>Fast-Food Venue</td>
+      <td>Lodging</td>
+      <td>Mexican Cuisine</td>
+      <td>Seafood Restaurant</td>
+      <td>American Cuisine</td>
+      <td>Gas Station</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>North Dallas</td>
+      <td>1</td>
+      <td>Shopping Venues</td>
+      <td>Asian Cuisine</td>
+      <td>Italian Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>Fast-Food Venue</td>
+      <td>American Cuisine</td>
+      <td>Grocery Store</td>
+      <td>Outdoor Destination</td>
+      <td>Seafood Restaurant</td>
+      <td>Home Shop</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Northwest Dallas</td>
+      <td>1</td>
+      <td>Asian Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>Bookstore</td>
+      <td>Fast-Food Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Oak Cliff</td>
+      <td>1</td>
+      <td>Fast-Food Venue</td>
+      <td>American Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>Candy Store</td>
+      <td>Park</td>
+      <td>Italian Cuisine</td>
+      <td>Golf Course</td>
+      <td>Outdoor Destination</td>
+      <td>Personal Services</td>
+      <td>Convenience Store</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Oak Lawn</td>
+      <td>1</td>
+      <td>Fast-Food Venue</td>
+      <td>American Cuisine</td>
+      <td>Drinking Establishment</td>
+      <td>Asian Cuisine</td>
+      <td>Park</td>
+      <td>Lodging</td>
+      <td>Grocery Store</td>
+      <td>Mexican Cuisine</td>
+      <td>Seafood Restaurant</td>
+      <td>South American Cuisine</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>Reunion District</td>
+      <td>1</td>
+      <td>Lodging</td>
+      <td>Gas Station</td>
+      <td>Museum</td>
+      <td>Plaza</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>South Boulevard-Park Row Historic</td>
+      <td>1</td>
+      <td>Entertainment Venue</td>
+      <td>American Cuisine</td>
+      <td>Lodging</td>
+      <td>Drinking Establishment</td>
+      <td>Fast-Food Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Dallas</td>
+      <td>West End Historic District</td>
+      <td>1</td>
+      <td>Entertainment Venue</td>
+      <td>Mexican Cuisine</td>
+      <td>American Cuisine</td>
+      <td>Plaza</td>
+      <td>Lodging</td>
+      <td>Fast-Food Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Arcadia Park</td>
+      <td>1</td>
+      <td>Garden Center</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Bellaire Park North</td>
+      <td>1</td>
+      <td>Outdoor Destination</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Bently Village</td>
+      <td>1</td>
+      <td>Home Shop</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Berkeley Place</td>
+      <td>1</td>
+      <td>American Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Chapin & Alemeda</td>
+      <td>1</td>
+      <td>Entertainment Venue</td>
+      <td>Music Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Cheyenne Ridge</td>
+      <td>1</td>
+      <td>Shopping Venues</td>
+      <td>Fast-Food Venue</td>
+      <td>Mexican Cuisine</td>
+      <td>Gas Station</td>
+      <td>Cajun / Creole Restaurant</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Eagle Ranch</td>
+      <td>1</td>
+      <td>Shopping Venues</td>
+      <td>Fast-Food Venue</td>
+      <td>Mexican Cuisine</td>
+      <td>Gas Station</td>
+      <td>Cajun / Creole Restaurant</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Far East</td>
+      <td>1</td>
+      <td>Liquor Store</td>
+      <td>Grocery Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Garden Acres</td>
+      <td>1</td>
+      <td>Convenience Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Hallmark-Camelot</td>
+      <td>1</td>
+      <td>Italian Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>Gas Station</td>
+      <td>Shopping Venues</td>
+      <td>Fast-Food Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Hampton Place</td>
+      <td>1</td>
+      <td>Outdoor Destination</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Heritage</td>
+      <td>1</td>
+      <td>Gym</td>
+      <td>Grocery Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Highland Hills</td>
+      <td>1</td>
+      <td>Convenience Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>John T White</td>
+      <td>1</td>
+      <td>Liquor Store</td>
+      <td>Grocery Store</td>
+      <td>Drinking Establishment</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Linwood</td>
+      <td>1</td>
+      <td>Fast-Food Venue</td>
+      <td>Asian Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>Drinking Establishment</td>
+      <td>Pet Service</td>
+      <td>Shopping Venues</td>
+      <td>Grocery Store</td>
+      <td>Mediterranean Cuisine</td>
+      <td>Seafood Restaurant</td>
+      <td>Gym</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Marine Park</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>McPherson Ranch</td>
+      <td>1</td>
+      <td>Italian Cuisine</td>
+      <td>Grocery Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>North Side</td>
+      <td>1</td>
+      <td>Drinking Establishment</td>
+      <td>American Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Parkwood Hills</td>
+      <td>1</td>
+      <td>Home Shop</td>
+      <td>Fast-Food Venue</td>
+      <td>Mexican Cuisine</td>
+      <td>Bookstore</td>
+      <td>Pet Service</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Ridglea Hills</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>Liquor Store</td>
+      <td>Golf Course</td>
+      <td>Fast-Food Venue</td>
+      <td>Personal Services</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Ridglea North</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>Fast-Food Venue</td>
+      <td>Italian Cuisine</td>
+      <td>Drinking Establishment</td>
+      <td>French Cuisine</td>
+      <td>Garden Center</td>
+      <td>Personal Services</td>
+      <td>Asian Cuisine</td>
+      <td>Gym</td>
+      <td>Liquor Store</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Rock Island - Samuels</td>
+      <td>1</td>
+      <td>Drinking Establishment</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Shaw Clarke</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>South Hemphill Heights</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Southgate</td>
+      <td>1</td>
+      <td>Gym</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Southland Terrace</td>
+      <td>1</td>
+      <td>Liquor Store</td>
+      <td>Convenience Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Summer Creek</td>
+      <td>1</td>
+      <td>Grocery Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Sunset Hills</td>
+      <td>1</td>
+      <td>Gym</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>United Riverside</td>
+      <td>1</td>
+      <td>Drinking Establishment</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Fort Worth</td>
+      <td>Villages of Stonegate</td>
+      <td>1</td>
+      <td>Liquor Store</td>
+      <td>Asian Cuisine</td>
+      <td>Grocery Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Apollo Arapaho & Camelot</td>
+      <td>1</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Camelot</td>
+      <td>1</td>
+      <td>Convenience Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Duck Creek</td>
+      <td>1</td>
+      <td>Outdoor Destination</td>
+      <td>Asian Cuisine</td>
+      <td>Residential</td>
+      <td>Athletic Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Duck Creek Estates</td>
+      <td>1</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Firewheel Estates</td>
+      <td>1</td>
+      <td>Italian Cuisine</td>
+      <td>American Cuisine</td>
+      <td>Golf Course</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Firewheel Farms</td>
+      <td>1</td>
+      <td>Italian Cuisine</td>
+      <td>American Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>First Centerville</td>
+      <td>1</td>
+      <td>Gym</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Freemonteers</td>
+      <td>1</td>
+      <td>Gym</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Gatewood Estates</td>
+      <td>1</td>
+      <td>Italian Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Holiday Park</td>
+      <td>1</td>
+      <td>Athletic Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Lake Point Condominiums</td>
+      <td>1</td>
+      <td>American Cuisine</td>
+      <td>Drinking Establishment</td>
+      <td>Athletic Store</td>
+      <td>Mexican Cuisine</td>
+      <td>Seafood Restaurant</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Picket Place</td>
+      <td>1</td>
+      <td>Athletic Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Place One</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Spring Park</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>Golf Course</td>
+      <td>Park</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Sutton Place</td>
+      <td>1</td>
+      <td>Athletic Venue</td>
+      <td>Southern / Soul Food Restaurant</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Garland</td>
+      <td>Town North Village</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Irving</td>
+      <td>Las Colinas Urban Center</td>
+      <td>1</td>
+      <td>Entertainment Venue</td>
+      <td>Mexican Cuisine</td>
+      <td>Fast-Food Venue</td>
+      <td>American Cuisine</td>
+      <td>Lodging</td>
+      <td>Golf Course</td>
+      <td>Outdoor Destination</td>
+      <td>Drinking Establishment</td>
+      <td>Plaza</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Irving</td>
+      <td>McArthur</td>
+      <td>1</td>
+      <td>American Cuisine</td>
+      <td>Mexican Cuisine</td>
+      <td>Convenience Store</td>
+      <td>Fast-Food Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Irving</td>
+      <td>Pioneer</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>Convenience Store</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Richardson</td>
+      <td>Duck Creek</td>
+      <td>1</td>
+      <td>Outdoor Destination</td>
+      <td>Asian Cuisine</td>
+      <td>Residential</td>
+      <td>Athletic Venue</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Richardson</td>
+      <td>Highland Terrace</td>
+      <td>1</td>
+      <td>Mediterranean Cuisine</td>
+      <td>Asian Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Richardson</td>
+      <td>North College Park</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Richardson</td>
+      <td>Spring Park</td>
+      <td>1</td>
+      <td>Mexican Cuisine</td>
+      <td>Golf Course</td>
+      <td>Park</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
