@@ -39,125 +39,197 @@
           you think of BMW's and banking and Highland Park. The question for someone considering moving to the DFW area, 
           though, is: is there a difference in the neighborhoods in Fort Worth and Dallas?
           <br><br>
-          <b>This project will investigate whether there are any systematic differences in Dallas vs. Fort Worth nighborhoods.</b>
+          <b>This project will investigate whether there are any systematic differences in Dallas vs. Fort Worth neighborhoods.</b>
       </p>
   </div>
   <div class="border border-primary m-4 p-4">
     <a name="data"></a>
     <h2 class="col-sm-12"><i class="fa fa-cubes"></i> <u>Data</u></h2>
+    <p>For this project, we needed data to identify the neighborhoods in Dallas-Fort Worth and data about the neighborhoods got be the basis of comparison.</p>
         <!-- The zillow icon size is 250 x 52 -->
-        <h4><img src="image/Zillow_Wordmark_Blue_RGB.png" alt="Zillow" style="float:left;width:70px;height:15px"> <b> Neighborhoods:  </b></h3>
-        <p> 
+        <h4><img src="image/Zillow_Wordmark_Blue_RGB.png" alt="Zillow" style="float:left;width:70px;height:15px"> <b> U.S. Neighborhoods:  </b></h3>
+        <div class="container">
+          <p> 
             The geodata used for this project is from the Zillow US Neighborhoods dataset.
             The dataset has over 17,300 neighboorhood boundaries in the largest cities in the U.S.  
-            The Zillow data team used various tactics to collect the data, including calling individual chambers of commerce, tourism and convention boards, speaking with real estate agents and community members in these areas, as well as using available online local sources.
+            The Zillow data team used various tactics to collect the data, including calling individual chambers of commerce, tourism and convention boards, 
+            speaking with real estate agents and community members in these areas, as well as using available online local sources.
             <br><br>
-            The Zillow dataset contains full geoshape data for each neighborhood
-            as well as properties sections that contain the neighborhood name, regionid, a two-dimensional geopoint, city, county and state.
+            The Zillow dataset contains the neighborhood name, regionid, a two-dimensional geopoint, city, county and state 
+            as well as polygons defining the boundaries for each neighborhood.
             <br><br>
             Zillow makes this data available for free under a Creative Commons licence. All that is required to use the files is to attribute Zillow as the source
-            of the data and make any updates or change you make to the files available to everyone else via the same or similar license.
+            of the data and make any updates or changes you make to the files available to everyone else via the same or similar license.
             The data can be downloaded at the <a href="https://data.opendatasoft.com/explore/dataset/zillow-neighborhoods%40public/export/" 
             target="_blank">opendatasoft website <i class="fa fa-download"></i></a>.
-            <br><br>
-            The data is available in a variety of formats including csv (comma-separated values), JSON (JavaScript Object Notation), Excel,
-              GeoJSON, Shapefile and KML (Keyhole Markup Language).  We used GeoJSON files.   
-            GeoJSON is an open standard format based on the JSON that was designed for representing simple geographical features, along with their non-spatial attributes. 
-            <br><br></p>
-
+            <br>            
+          </p>
+          <p>The data is available in a variety of formats:</p>
+          <ul>
+            <li>csv - comma-separated-values;</li>            
+            <li>JSON - JavaScript Object Notation; </li>            
+            <li>Excel;</li>            
+            <li>GeoJSON - an open standard format based on the
+            JSON that was designed for representing simple geographical features along with
+            their non-spatial attributes; </li>            
+            <li>KML - Keyhole Markup Language.</li>
+          </ul>
+          <p class="MsoNormal">
+            We downloaded GeoJSON files containing the neighborhood data for Dallas and Fort Worth from the opensoftdata web site.
+          </p>
+          <ul>
+              <li>The files were read using the geojson library and the neighborhood properties and boundary coordinates were appended to a dataframe.</li>
+              <li>There are 425 neighborhoods, 225 in Fort Worth with the remainder in Dallas--
+                  and it's suburbs of Carollton, Desoto, Garland, Irving, Mesquite, Plano and Richardson.</li>
+              <li>As you can see in the map below, some neighborhoods are far apart, but many are close
+                together. This createdsome interesting wrinkles in collecting data about the neighborhoods.</li>
+          </ul>
+          <div class="mx-auto">
+            <iframe src="DFW_Neighborhoods.html" title="DFW Neighborhoods" width="80%" height="500" style="border:1px solid black;"></iframe>
+            <a href="DFW_Neighborhoods.html" target="_blank" class="btn btn-info align-middle" role="button">Open in new window</a>                
+          </div> 
+        </div>
+        <br><br>
         <h4><i class="fa fa-foursquare"></i> <b>Place Data</b> by <b>Foursquare:</b>  </h3>
-        <p>Information about the neighborhoods was collected using the Foursquare Places database.  
+        <div class="container">
+          <p>Information about the neighborhoods was collected using the Foursquare Places database.  
             The Places database has an extensive amount of venue data and user content that can be accessed using geolocation data. 
             The database contains "firmographic" data and "rich community-sourced content" for more than 60 million commercial places around the world.
-            For each venue, there are over 90 attributes that can be accessed, including the venue name, address, gelocation, category as well as ratings, tips and photos. 
-            <br><br>
-            We focused on the information about the types of venues that are located in the neighborhoods to determine whether neighborhoods are similar or not.
-        </p>
-        <h4>Data Collection</h4>
-        <ol>
-            <li>GeoJSON files containing the neighborhood data for Dallas and Fort Worth were downloaded from the opensoftdata web site.</li>
-                <ul>
-                    <li>The files were read using the geojson library and the neighborhood properties and boundary coordinates were appended to a dataframe.</li>
-                    <li>The geo_point_2d column was split into Latitude and Longitude columns and that column as well as the regionid were dropped.</li>
-                    <li>There are 425 neighborhoods, 225 in Fort Worth with the remainder in Dallas--
-                        and it's suburbs of Carollton, Desoto, Garland, Irving, Mesquite, Plano and Richardson.</li>
-                </ul>
-            <li>The neighborhood venues are collected using the Foursquare Places API.</li>                
-        </ol>
+            For each venue, there are over 90 attributes that can be accessed, including the venue name, address, gelocation, category as well as ratings, tips and photos.             
+          </p>
+          <p>Our focus was on using the types of venues in each neighborhood to characterize the nature of the neighborhoods.</p>
+        </div> 
+        <!-- ************************************  -->
+        <h4><b>Data Collection</b></h4>
+        <!-- ************************************  -->
+        <ol>            
+          <li><b>Explore Entry Point</b>
+            <p>The neighborhood venues were collected using the explore entry point of the Foursquare Places API which returns venues within a specified radius around a geographic point.</p>
+          </li>
+          <li><b>Setting the radius</b>          
+            <p class=MsoNormal>As we mentioned above, some neighborhoods are close
+            together, while some are farther apart.  To determine the radius, we first used the Shapely Polygon  bounds 
+            property that returns two coordinates which bounds the polygon.  Then we used geopy to compute the vincenty
+            distance in meters.  For example, if you
+            have two coordinates p1 and p2, you use
+            1000*geopy.distance.vincenty(p1,p2).km.  To be conservative, we would use that as the radius.  In addition, for reasons that will be made
+            clear below, the minimum radius we used was 1,600 meters.</p>
+          </li>
+          <li><b>Pagination</b>
+            <p class=MsoNormal>One thing that we discovered while working on this project
+            was that while there may be hundreds of venues within the radius, the Places
+            API only returns 100 places with each explore endpoint call.  So after the initial call, we checked the
+            totalResults  property and used a while loop where we would increment the
+            offset=  parameter by 100 and make an additional request until we processed
+            all of the venues.</p>
+          </li>
+          <li><b>Neighborhood venues inclusion rule</b> 
+            <p>Once the API returned the venues for each neighborhood, we needed to decide whether they should be included in the analysis.  We used two criteria.</p>         
+            <ul>
+              <li><b>Boundary check</b>            
+                <p class=MsoNormal>The first thing we check is whether the venue is  in the neighborhood.  To do this we used
+                Shapely's Point <b>within</b> function.  The venue coordinates define the Point and the neighborhood boundaries define the
+                Polygon, so it is as easy as checking if Point.within(Polygon)==True.</p>
+              </li>
+              <li><b>Minimum radius</b>             
+                <p class=MsoNormal>We decided that we didn't want to rely solely on the
+                neighborhood boundaries.  Even if a venue
+                was not in the polygon, it was included if it was within a minimum radius.  We used 800 meters, roughly one-half of a
+                mile, for the minimum radius.</p>
+              </li>
+            </ul>
+          </li>
+          <li><b>Venue Groups vs. Venue Categories</b>          
+            <p class=MsoNormal>One thing that we will see in the results section is that
+            the granularity of the venue categories is not conducive to good clustering
+            results.  At the same time, we wanted to
+            make a finer distinction than the higher level hierarchy of the Four Square
+            venue classification system.  For
+            example, we didn't want to group all restaurants together.  We wanted to know if a neighborhood had a lot
+            of Mexican cuisine or Asian cuisine, but we didn't care whether the former was
+            a Mexican Restaurant, a Tex-Mex Restaurant, a Burrito Place, or a Taco Place or
+            whether the latter was an Asian, Chinese, Indian, Japanese, Korean, Persian,
+            Sushi, Thai or Vietnamese Restaurant or whether it was a Noodle House.  Similarly, a fast food place is a fast food
+            place regardless of whether it s serving burgers, chicken or hot dogs.  So we made a custom Venue Group in an attempt
+            to group very similar venues while at the same time being able to differentiate
+            distinctive neighborhood characteristics.  (See <a href="https://brianpennington.github.io/VenueGroups.html">Venue
+            Groups</a> for a full listing.)</p>
+          </li>
+        </ol>                    
   </div>
   <div class="border border-primary m-4 p-4">
-      <a name="methodology"></a>
-      <h2 class="col-sm-12"><i class="fa fa-search"></i> <u>Methodology</u></h2>
+    <a name="methodology"></a>
+    <h2 class="col-sm-12"><i class="fa fa-search"></i> <u>Methodology</u></h2>
+    <h3>K-means Clustering</h3>
+      <div class="container">
+      <p class=MsoNormal>K-means clustering is one of the simplest and popular
+      unsupervised machine learning algorithms.  With roots in signal processing, the aim is to partition the
+      observations into a set number of clusters where each observations belongs to
+      the cluster with nearest to the centroid of the cluster.</p>
+      <h4>Pros</h4>
       <ol>
-          <li>Neighborhood Venues</li>
-              <ul>
-                  <li>The Zillow Neighborhoods can be quite granular. At the same time, neighboorhoods in some sections can be miles apart.</li>
-                  <li>Since the Foursquare Places API looks for venues within a specified radius of a geopoint, we adopted a mixed solution.</li>
-                    <ul>
-                      <li>We used a radius of 8km (approximately 5 miles) around each neighborhood's geographical coordinate.</li>
-                      <li>Then we excluded any venues that were either within the neighborhoods polygon or within 800 meters of the neighborhood's 
-                        geographical coordinate.
-                      </li>
-                      <li>If there were no venues that met that definition, the neighborhood was assigned a "venue" of "Residential".</li>
-                    </ul>                  
-                  <!-- <li>238 of the neighborhoods had no venues within their neighborhood boundaries.</li> -->                        
-                  <!-- <li>That left 66 neighborhoods classified as solely residential</li> -->
-                  <li>
-                    <div class="mx-auto">
-                        <iframe src="DFW_Neighborhoods.html" title="DFW Neighborhoods" width="80%" height="500" style="border:1px solid black;"></iframe>
-                    </div>
-                  </li>
-              </ul>
-          <li>K-means Clustering</li>
-              <ul>
-                  <li>We used K-means clustering using venue concentrations to identify similar neighborhoods.
-                      K-means clustering is a "go to" method because of its simplicity and speed.
-                  </li>
-                  <li>Pros:</li>
-                      <ol>
-                          <li>It is fast and efficient.</li>
-                          <li>It is a technique geared to work on unlabeled data.</li>
-                          <li>It is an iterative technique.</li>
-                      </ol>
-                  <li>Cons:</li>
-                      <ol>
-                          <li>You must understand the context of your data well.</li>
-                          <li>You have to choose your own value of k, the number of clusters.</li>
-                          <li>It doesn't deal well with outliers.</li>
-                      </ol>
-              </ul>
-          <li>Venue Categories as the target item</li>
-              <p>When we initially ran a cluster analysis on the venue categories (map below), the residential neighborhoods
-                  were readily identifiable.  There were a handful of neighborhoods that had golf courses, 
-                  a few that only had parks,
-                  and some that only had convenience or discount stores.  
-                  But almost two-thirds of the neighborhoods were grouped into a large cluster 
-                  that could best be characterized as have "a little bit of everything".  Trying to spot a common theme for this large cluster
-                  drew our attention to the "granularity" of the venue categories.  Do we really want to split out Mexican Cuisine into 
-                  Mexican Restaurant, Tex-Mex Restaurant, Burrito Place and Taco Place?  Aren't bars, beer bars, cocktail bars, dive bars, gay bars,
-                  hotel bars, wine bars, lounges, and pubs all "drinking establishments"?  Is anything gained by distinguishing between Gyms,
-                  Boxing Gyms, Gymnastics Gyms and Gym/Fitness Centers?                     
-              </p>
-              <div>
-                  <iframe src="DFW_by_VenueCategory.html" title="DFW Neighborhoods by Venue Category" width="80%" height="500" style="border:1px solid black;"></iframe>
-              </div>
-              
-                  <li>Defined "Venue Groups" to reduce the granularity</li>
-                  <p>
-                      It was decided that rather than specifying different categories of restaurants, it was better to specity the cuisine, 
-                      e.g. Mexican Cuisine, Asian Cuisine, French Cuisine, Italian Cuisine, etc.
-                      <br><br>
-                      We also grouped types of venues, such as Athletic Venues and Shopping Venues.
-                      Without being exhaustive, we grouped the obvious venue categories into more inclusive "venue groups".  The full list can be
-                      found <a href="VenueGroups.html" target="_blank">here.</a>
-                      <br><br>
-                      One we defined the Venue Groups, we repeated the k-means cluster analysis for 8 clusters and again for 10 clusters.
-                  </p>
+        <li>It is simple to understand.</li>
+        <li>It is fast and efficient.</li>
+        <li>It is easy to implement.</li>
+        <li>You always get a result.</li>
       </ol>
+      <h3>Cons</h3>
+      <ol>
+        <li>You have to specify the number of clusters.</li>
+        <li>It is sensitive to initialization of the centroids.</li>
+        <li>It is sensitive to outliers.</li>
+      </ol>
+    </div>
+    <h3>Determining the number of Factors</h3>
+    <div class="container">
+      <h4>Elbow Method</h4>
+
+      <p class=MsoNormal>A very common method to determine the number of factors is
+      to plot the distortion scores for a range of clusters and to use the point
+      where there is an "elbow" as the optimal number of clusters.  The distortion score is the average of the
+      squared distances from each point to its assigned center.  The intuition around this method is that if
+      there are valid clusters, you should see a dramatic improvement in the score,
+      but at some point the improvement "flattens out" creating an "elbow" in the
+      graph of the scores.</p>
+
+      <p class=MsoNormal>The problem is that it is not always easy to tell exactly
+      where this occurs and the choice of the number of clusters can be somewhat
+      arbitrary.</p>
+
+      <h4>Silhouette Coefficient</h4>
+
+      <p class=MsoNormal>The Silhouette Coefficient is calculated by (x-y)/ max(x, y)
+      where y is the mean intra-cluster distance and x is the mean inter-cluster
+      distance.  The coefficient varies between
+      -1 and 1 with a value close to 1 being very good, a value close to 0 indicates
+      a lot of cluster overlap, and negative values indicate very poor results.  The reason that it is usually preferred is
+      that it takes into account both how tight the clusters are (y) and how far
+      apart the different clusters are (x).</p>
+    </div>
   </div>
   <div class="border border-primary m-4 p-4">
     <a name="results"></a>
     <h2 class="col-sm-12"><i class="fa fa-tasks"></i> <u>Results</u></h2>
+    <h3>Clustering By Venue Category</h3>
+    <div class="container">
+      <h4>Distortion score elbow</h4>
+
+      <p class=MsoNormal>The distortion scores (and the silhouette coefficients
+      below) were plotted using Yellowbrick's KElbowVisualizer.  The visualizer selects 16 as the optimal
+      number of clusters, but you can see how arbitrary that is.  Why not 6 clusters? Or 14?</p>
+
+      <h4>Silhouette Coefficient</h4>
+
+      <p class=MsoNormal>The silhouette coefficient seems much more plausible.  While, as we will see below, there are some
+      obvious clusters, there is not much to
+      be gained by adding additional clusters.  Basically, adding in additional centroids leads to a lower distortion
+      score, but the problem that the silhouette coefficient highlights is that while
+      that reduces the intra-cluster distance, there is not a corresponding improvement
+      in the intra-cluster distance.  In
+      addition, if you rerun the cluster analysis additional times, you will observe
+      material differences in the resulting charts.  This is indicative that the initialization of the centroids is driving
+      the results which reinforces that clusters large than 6 are random.</p>
+    </div>
     <div class="row m-4 h-200 ">
       <div class="col-md-6 p-2 grey mx-auto text-center" >
         <img src="Distortion_elbow_by_category-16.PNG"  class="img-fluid " alt="k-elbow results by group" >
@@ -165,6 +237,43 @@
       <div class="col-md-6 p-2 grey mx-auto text-center" >
         <img src="Silhouette_Coefficient_by_Category.PNG"  class="img-fluid " alt="k-elbow results by group" >
       </div>
+      <h4><a name="_Clustering,_k=6"></a>Clustering Results, k=6</h4>
+      <div class="container">
+        <p class=MsoNormal>The details of the clusters by venue category are below.  
+          The percentages in the table are the average venue percentages of the neighborhoods in the cluster.
+          We can see
+        that there are some completely residential neighborhoods, and others with parks
+        or golf courses without many other venues.  There are a small number of neighborhoods that have mostly convenience
+        stores and another cluster with mostly discount stores.  But the vast majority of the
+        neighborhoods--almost 80%--are unable to be differentiated using venue category.</p>
+
+        <div class="embed-responsive embed-responsive-21by9 d-inline-block">
+          <iframe src="DFW_by_VenueCategory.html" title="DFW Neighborhoods by Venue Category" class="embed-responsive-item"></iframe>
+        </div>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="Clusters_by_Category.html" title="Clusters by Venue Category" class="embed-responsive-item"></iframe>
+        </div>
+      </div>
+    </div>
+    <h3>Clustering by Venue Group</h3>
+    <div class="container">
+      <h4>Distortion statistic elbow</h4>
+
+      <p class=MsoNormal>The Yellowbrick visualizer detects the elbow at 10 clusters,
+      but, again, that choice looks fairly arbitrary.</p>
+
+      <h4>Silhouette Coefficient</h4>
+
+      <p class=MsoNormal>The silhouette coefficient looks more reasonable.  The visualizer highlights an interesting
+      result.  Some practitioners apply the
+      elbow method to the silhouette coefficient--hence the visualizer's choice of 9
+      clusters--while others argue that since the silhouette coefficient is
+      two-dimensional, i.e. it takes into account the intra-cluster as well as
+      inter-cluster distances as opposed to the one-dimensional distortion score, it
+      is not necessary to use the elbow method and the optimal number of clusters is
+      the global maximum--which in this case would argue for 15 clusters.  We decided to do the analysis for both 9
+      clusters and 15 clusters to see if the results gave us any insight as to which
+      approach might be more reasonable.</p>
     </div>
     <div class="row m-4 h-200 ">
       <div class="col-md-6 p-2 grey mx-auto text-center" >
@@ -174,40 +283,157 @@
         <img src="Silhouette_Coefficient_by_Group.PNG"  class="img-fluid " alt="k-elbow results by group" >
       </div>
     </div>
-    <div class="embed-responsive embed-responsive-21by9 d-inline-block">
-      <iframe src="DFW_by_VenueGroup-9.html" title="DFW Neighborhoods by Venue Group" class="embed-responsive-item"></iframe>
-    </div>           
-    <a href="DFW_by_VenueGroup-9.html" target="_blank" class="btn btn-info float-right align-middle" role="button">Open in new window</a>
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe src="Clusters_By_Group-9.html" title="Clusters By Group" class="embed-responsive-item"></iframe>
-      <!-- width="100%" height="800" style="border:1px solid black;"  -->
-    </div>           
-    <div class="embed-responsive embed-responsive-21by9 d-inline-block">
-      <iframe src="DFW_by_VenueGroup-15.html" title="DFW Neighborhoods by Venue Group" class="embed-responsive-item"></iframe>
-    </div>           
-    <a href="DFW_by_VenueGroup-15.html" target="_blank" class="btn btn-info float-right align-middle" role="button">Open in new window</a>
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe src="Clusters_By_Group-15.html" title="Clusters By Group" class="embed-responsive-item"></iframe>
-      <!-- width="100%" height="800" style="border:1px solid black;"  -->
-    </div>           
+    <h3><a name="_Clusters_9"></a>Clusters by Venue Group, k=9</h3>
+    <div class="container">      
+      <p class=MsoNormal>The cluster analysis isolated many of the same clusters that
+      were identified by the category cluster analysis:</p>
+      <ul>
+        <li>The 38 residential neighborhoods (with no venues);</li>
+        <li>The communities that were characterized by golf courses and those characterized by parks;</li>
+        <li>There were a slightly smaller number of
+        communities that had predominantly convenience stores and the communities
+        dominated by shopping venues most likely had a lot of overlap with the
+        communities that were dominated by discount stores in the category clustering.</li>
+      </ul>
+      <p class=MsoNormal>The venue groups enabled some differentiation in the huge
+      vat of "everything else" in the category clustering:</p>
+      <ul>
+        <li>There were 53 neighborhoods where fast food venues were by far the dominant feature followed by convenience stores,
+        drinking establishments, gas stations, and Asian cuisine.</li>
+        <li>There were 185 neighborhoods where fast-food was the dominant venue followed by a mix of shopping venues, Asian cuisine, Mexican
+        cuisine and grocery stores.</li>
+        <li>There were 94 neighborhoods that had mostly Mexican cuisine followed by athletic venues, drinking establishments and home services.</li>
+      </ul>      
+      <div class="embed-responsive embed-responsive-21by9 d-inline-block">
+        <iframe src="DFW_by_VenueGroup-9.html" title="DFW Neighborhoods by Venue Group" class="embed-responsive-item"></iframe>
+      </div>           
+      <a href="DFW_by_VenueGroup-9.html" target="_blank" class="btn btn-info float-right align-middle" role="button">Open in new window</a>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe src="Clusters_By_Group-9.html" title="Clusters By Group" class="embed-responsive-item"></iframe>
+        <!-- width="100%" height="800" style="border:1px solid black;"  -->
+      </div>           
+    </div>
+    <h3>Clusters by Venue Group, k=15</h3>
+    <div class="container">      
+      <p class=MsoNormal>We can get some interesting insights into why the silhouette
+      coefficient was higher for 15 clusters.</p>
+
+      <p class=MsoNormal>First, there were three clusters that were small, but highly distinctive:</p>
+      <ul>
+        <li>Health services (4 neighborhoods);</li>
+        <li>Home services (4 neighborhoods);</li>
+        <li>Athletic venues (4 neighborhoods).</li>
+      </ul>
+      <p class=MsoNormal>In addition, there was the ability to make more
+      differentiation in the types of eating establishments, including some
+      neighborhoods dominated by Asian cuisine and some that had primarily drinking
+      establishments that seemed to be situated around parks and marinas.</p>
+      <div class="embed-responsive embed-responsive-21by9 d-inline-block">
+        <iframe src="DFW_by_VenueGroup-15.html" title="DFW Neighborhoods by Venue Group" class="embed-responsive-item"></iframe>
+      </div>           
+      <a href="DFW_by_VenueGroup-15.html" target="_blank" class="btn btn-info float-right align-middle" role="button">Open in new window</a>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe src="Clusters_By_Group-15.html" title="Clusters By Group" class="embed-responsive-item"></iframe>
+        <!-- width="100%" height="800" style="border:1px solid black;"  -->
+      </div>           
+    </div>
+
   </div>    
   <div class="border border-primary m-4 p-4">
       <a name="discussion"></a>
       <h2 class="col-sm-12"><i class="fa fa-commenting-o"></i> <u>Discussion</u></h2>
+      <br>
       <ul>
-        <li>Fort Worth has more diverse neighborhoods, although the northern suburbs of Dallas show more diversity than Dallas proper.</li>
+        <li><b>Neighborhood diversity</b>
+          <p class=MsoNormal>Looking at the cluster maps, it is clear that Fort Worth has
+          more diversity in its neighborhoods than Dallas.  The northern suburbs of Dallas--Carrollton, Richardson,
+          Garland--have a similar diversity profile to Fort Worth.</p>
+        </li>
+        <li><b>Neighborhood size</b>
+          <p class=MsoNormal>The other striking feature is how much smaller the
+          neighborhoods are in Fort Worth and the northern suburbs of Dallas than in Dallas
+          proper.  It is possible that this is
+          because in 1911, Dallas adopted a city plan developed by George Kessler, who
+          was raised in Dallas and later become a nationally recognized civic engineer.  It could be that the larger size of the
+          neighborhoods is masking intra-neighborhood diversity.</p>
+        </li>
+        <li><b>Fast Food Venues</b>
+          <p class=MsoNormal>The other thing that is notable is how fast food venues
+          dominate the clusters.  Maybe it's the
+          ubiquitous nature of fast food venues that is skewing the results.  It is possible that we should exclude the
+          fast food venues.   That would put more
+          weight on the other types of venues that might be more indicative of the
+          character of a neighborhood. </p>
+        </li>        
+        <li><b>Is k-means clustering the right technique?</b>
+
+          <p class=MsoNormal>Another assumption that we have made is that k-means
+          clustering is the right tool to be using.  Maybe we would get different results if we used, for example, a Gaussian
+          Mixture Model (GMM).  K-means clustering
+          works well with spherical clusters, while GMM can work with arbitrarily shaped
+          clusters.</p>
+        </li>
+
+        <li><b>Are venues the right way to characterize neighborhoods?</b>
+
+          <p class=MsoNormal>We have also assumed that venues are appropriate indicators
+          for the nature of neighborhoods.  It is
+          possible that there may better ways to characterize neighborhoods, such as
+          using demographic data.</p>
+        </li>
+
       </ul>
   </div>
+  <!-- *************************************************************************** -->
   <div class="border border-primary m-4 p-4">    
-      <a name="conclusion"></a>
-      <h2 class="col-sm-12"><i class="fa fa-trophy"></i> <u>Conclusion</u></h2>
+    <a name="conclusion"></a>
+    <h2 class="col-sm-12"><i class="fa fa-trophy"></i> <u>Conclusion</u></h2>
+    <ul>        
+    <li>The data indicates that Fort Worth neighborhoods are more
+      diverse.  They are also more numerous--which
+      speaks to neighborhood size.
+    </li>        
+      <li>One interesting avenue of inquiry may be to examine whether
+      the venue groups are associated with home values.  We used the Zillow U.S. Neighborhoods dataset
+      in this analysis, but Zillow also compute Home Value Indices by
+      neighborhood.  As noted in the
+      discussion, it may be fruitful to collect demographic information and
+      investigate the relationship among neighborhood venues, demographic data and
+      home values.
+    </li>
+      
+    <li>One final thought is that perhaps data science is not well
+      suited to answer this particular question.   
       <ul>
-        <li>Look for more innovative ways to group venues to capture the character of a nighborhood.</li>
-        <li>Incorporate the Zillow Home Value Index.  This might be a clustering factor or could see if the venue composition could be used
-          to predict home prices.
+        <li>Dallas was established as a trading post at
+          the intersection of some Caddo Indian trails on the Trinity floodplain around
+          the same time that Fort Worth was established as an army outpost on a bluff
+          overlooking the Trinity River in 1849.</li>        
+        <li>As a stop on the legendary Chisholm Trail, cattle and
+          ranching were always a big part of Fort Worth's heritage, earning it the
+          nickname of Cowtown.  In 1876, the Texas
+          and Pacific Railway was finally completed, stimulating a boom and transforming
+          the Fort Worth Stockyards into a premier center for the cattle wholesale trade.</li>        
+        <li>When the railroad came through Dallas, it brought Sanger
+        Brothers department store, E.M. Kahn clothiers and others making Dallas an
+        important regional shopping locale and distribution point.</li>        
+        <li>Fort Worth had "Hell's Half-Acre", the biggest collection of
+        saloons, dance halls, and bawdy houses south of Dodge City, while Dallas had "the
+        Park Cities"--University Park and Highland Park where the tony Neiman-Marcus
+        department store had its roots.  Fort
+        Worth had the Southwestern Exposition and Livestock Show, but Dallas had the
+        Texas State Fair.</li>
+        <li>In 1914, Dallas was
+        named the site of a regional Federal Reserve Bank and within 20 years, Dallas
+        was the financial center of the Southwest.</li>                
         </li>
-        <li>Use more demographic data to define neighborhoods rather than using venue data or as a supplement to the venue data.</li>
       </ul>
+    <br><br>
+    <p class=MsoNormal>Maybe that sheds some light on why BMWs are more common in Dallas,
+      while pickup trucks are more common in Fort Worth.</p>
+      
+    <p class=MsoNormal>Maybe it's not the venues that define the cities at
+    all.  Maybe it's the people.  And the history.</p>  
   </div>
 
 
